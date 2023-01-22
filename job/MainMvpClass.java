@@ -23,11 +23,11 @@ public class MainMvpClass {
         // System.out.println(studentGroupOneCourse);
 
 
-// Создание объекта о посищении студентов
+// Создание объекта о посещении студентов
         AttendanceVisitStudent attendanceVisitingJon = new AttendanceVisitStudent(Jon);
         AttendanceVisitStudent attendanceVisitingSara = new AttendanceVisitStudent(Sara);
         AttendanceVisitStudent attendanceVisitingBill = new AttendanceVisitStudent(Bill);
-// список посищений студентов
+// список посещений студентов
         attendanceVisitingSara.addVisiting("01-01-2023", true);
         attendanceVisitingSara.addVisiting("02-01-2023", true);
         attendanceVisitingSara.addVisiting("03-01-2023", true);
@@ -57,7 +57,7 @@ public class MainMvpClass {
         attendanceGroupOneCourse.addAttendanceVisit(attendanceVisitingJon);
         attendanceGroupOneCourse.addAttendanceVisit(attendanceVisitingBill);
         attendanceGroupOneCourse.addAttendanceVisit(attendanceVisitingSara);
-// Создание объекта контроллера посищения группы 
+// Создание объекта контроллера посещения группы
         ControllerAttendanceGroup controllerGroup = new ControllerAttendanceGroup(attendanceGroupOneCourse);
 
 // Работа методов объекта контроллера
