@@ -49,7 +49,7 @@ public class ControllerAttendanceGroup {
         for (String iterable : sortedStudentVisit.keySet()) {
             sortListStudent.add(iterable);
         }
-        System.out.println("-------------------------------------");
+        System.out.println("_-=#=-_-=#=-_-=#=-_-=#=-_-=#=-_-=#=-_-=#=-_");
         System.out.println("Список посещаемости студентов по убыванию:");
         for (int i = sortListStudent.size() - 1; i >= 0; i--) {
             System.out.println(sortListStudent.get(i));
@@ -68,7 +68,7 @@ public class ControllerAttendanceGroup {
                 count++;
             }
             if ((float) count / 100 * 25 > countTrue) {
-                System.out.println(attendanceVisit.getStudent().getName() + " - процент посищения ниже 25%");
+                System.out.println(attendanceVisit.getStudent().getName() + " - процент посещения ниже 25%");
             }
         }
     }
@@ -84,7 +84,7 @@ public class ControllerAttendanceGroup {
                 }
                 count++;
             }
-            System.out.println(attendanceVisit.getStudent().getName() + " - процент посищения = "
+            System.out.println(attendanceVisit.getStudent().getName() + " - процент посещения = "
                     + (float) countTrue * 100 / count + "\n");
         }
     }
