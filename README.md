@@ -1,6 +1,6 @@
 # Java_OOP - Seminar_5
 
-![pictures java for oop](https://raw.githubusercontent.com/Terekhov-A-S/Java_OOP_Seminar_2/main/Icon_Java_OOP_Advanced.png)
+![pictures java for oop](https://raw.githubusercontent.com/Terekhov-A-S/Java_OOP_Seminar_5/main/Icon_Java_OOP_Advanced.png)
 
 ## Напишите программу, позволяющую анализировать посещаемость студентов. Используйте паттерн MVP.
 
