@@ -33,6 +33,6 @@ public class AttendanceVisitStudent {
 
     @Override
     public String toString() {
-        return "AttendanceServise [student=" + student + ", lst=" + visit + "]";
+        return "AttendanceService [student=" + student + ", lst=" + visit + "]";
     }
 }

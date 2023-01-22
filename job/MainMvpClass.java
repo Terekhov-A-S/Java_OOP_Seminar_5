@@ -11,52 +11,64 @@ public class MainMvpClass {
 
     public static void main(String[] args) {
 // Создание объектов студентов
-        Student Jon = new Student("Jon", 1);
-        Student Sara = new Student("Sara", 1);
-        Student Bill = new Student("Bill", 1);
+        Student Vasiliy = new Student("Василий", 1);
+        Student Viktoriya = new Student("Виктория", 1);
+        Student Afanasiy = new Student("Афанасий", 1);
+        Student Sofiya = new Student("София", 1);
 // Создание объекта группы студентов
         StudentGroup studentGroupOneCourse = new StudentGroup();
 // Добавление студентов в группу студентов
-        studentGroupOneCourse.addStudentInGroup(Jon);
-        studentGroupOneCourse.addStudentInGroup(Sara);
-        studentGroupOneCourse.addStudentInGroup(Bill);
+        studentGroupOneCourse.addStudentInGroup(Vasiliy);
+        studentGroupOneCourse.addStudentInGroup(Viktoriya);
+        studentGroupOneCourse.addStudentInGroup(Afanasiy);
+        studentGroupOneCourse.addStudentInGroup(Sofiya);
         // System.out.println(studentGroupOneCourse);
 
 
 // Создание объекта о посещении студентов
-        AttendanceVisitStudent attendanceVisitingJon = new AttendanceVisitStudent(Jon);
-        AttendanceVisitStudent attendanceVisitingSara = new AttendanceVisitStudent(Sara);
-        AttendanceVisitStudent attendanceVisitingBill = new AttendanceVisitStudent(Bill);
+        AttendanceVisitStudent attendanceVisitingVasiliy = new AttendanceVisitStudent(Vasiliy);
+        AttendanceVisitStudent attendanceVisitingViktoriya = new AttendanceVisitStudent(Viktoriya);
+        AttendanceVisitStudent attendanceVisitingAfanasiy = new AttendanceVisitStudent(Afanasiy);
+        AttendanceVisitStudent attendanceVisitingSofiya = new AttendanceVisitStudent(Sofiya);
 // список посещений студентов
-        attendanceVisitingSara.addVisiting("01-01-2023", true);
-        attendanceVisitingSara.addVisiting("02-01-2023", true);
-        attendanceVisitingSara.addVisiting("03-01-2023", true);
-        attendanceVisitingSara.addVisiting("04-01-2023", true);
-        attendanceVisitingSara.addVisiting("05-01-2023", true);
-        attendanceVisitingSara.addVisiting("06-01-2023", true);
-        attendanceVisitingSara.addVisiting("07-01-2023", true);
+        attendanceVisitingViktoriya.addVisiting("01-01-2023", true);
+        attendanceVisitingViktoriya.addVisiting("02-01-2023", true);
+        attendanceVisitingViktoriya.addVisiting("03-01-2023", true);
+        attendanceVisitingViktoriya.addVisiting("04-01-2023", true);
+        attendanceVisitingViktoriya.addVisiting("05-01-2023", true);
+        attendanceVisitingViktoriya.addVisiting("06-01-2023", false);
+        attendanceVisitingViktoriya.addVisiting("07-01-2023", true);
 
-        attendanceVisitingBill.addVisiting("01-01-2023", false);
-        attendanceVisitingBill.addVisiting("02-01-2023", false);
-        attendanceVisitingBill.addVisiting("03-01-2023", false);
-        attendanceVisitingBill.addVisiting("04-01-2023", false);
-        attendanceVisitingBill.addVisiting("05-01-2023", false);
-        attendanceVisitingBill.addVisiting("06-01-2023", false);
-        attendanceVisitingBill.addVisiting("07-01-2023", true);
+        attendanceVisitingAfanasiy.addVisiting("01-01-2023", false);
+        attendanceVisitingAfanasiy.addVisiting("02-01-2023", false);
+        attendanceVisitingAfanasiy.addVisiting("03-01-2023", false);
+        attendanceVisitingAfanasiy.addVisiting("04-01-2023", false);
+        attendanceVisitingAfanasiy.addVisiting("05-01-2023", false);
+        attendanceVisitingAfanasiy.addVisiting("06-01-2023", false);
+        attendanceVisitingAfanasiy.addVisiting("07-01-2023", true);
 
-        attendanceVisitingJon.addVisiting("01-01-2023", true);
-        attendanceVisitingJon.addVisiting("02-01-2023", false);
-        attendanceVisitingJon.addVisiting("03-01-2023", true);
-        attendanceVisitingJon.addVisiting("04-01-2023", true);
-        attendanceVisitingJon.addVisiting("05-01-2023", true);
-        attendanceVisitingJon.addVisiting("06-01-2023", false);
-        attendanceVisitingJon.addVisiting("07-01-2023", true);
+        attendanceVisitingSofiya.addVisiting("01-01-2023", true);
+        attendanceVisitingSofiya.addVisiting("02-01-2023", true);
+        attendanceVisitingSofiya.addVisiting("03-01-2023", true);
+        attendanceVisitingSofiya.addVisiting("04-01-2023", true);
+        attendanceVisitingSofiya.addVisiting("05-01-2023", true);
+        attendanceVisitingSofiya.addVisiting("06-01-2023", true);
+        attendanceVisitingSofiya.addVisiting("07-01-2023", true);
+
+        attendanceVisitingVasiliy.addVisiting("01-01-2023", true);
+        attendanceVisitingVasiliy.addVisiting("02-01-2023", false);
+        attendanceVisitingVasiliy.addVisiting("03-01-2023", true);
+        attendanceVisitingVasiliy.addVisiting("04-01-2023", true);
+        attendanceVisitingVasiliy.addVisiting("05-01-2023", true);
+        attendanceVisitingVasiliy.addVisiting("06-01-2023", false);
+        attendanceVisitingVasiliy.addVisiting("07-01-2023", true);
 // Создание объекта посещаемости группы
         AttendanceGroup attendanceGroupOneCourse = new AttendanceGroup();
 // Добавление в группу посещаемости, студентов с их посещаемостью
-        attendanceGroupOneCourse.addAttendanceVisit(attendanceVisitingJon);
-        attendanceGroupOneCourse.addAttendanceVisit(attendanceVisitingBill);
-        attendanceGroupOneCourse.addAttendanceVisit(attendanceVisitingSara);
+        attendanceGroupOneCourse.addAttendanceVisit(attendanceVisitingVasiliy);
+        attendanceGroupOneCourse.addAttendanceVisit(attendanceVisitingAfanasiy);
+        attendanceGroupOneCourse.addAttendanceVisit(attendanceVisitingViktoriya);
+        attendanceGroupOneCourse.addAttendanceVisit(attendanceVisitingSofiya);
 // Создание объекта контроллера посещения группы
         ControllerAttendanceGroup controllerGroup = new ControllerAttendanceGroup(attendanceGroupOneCourse);
 

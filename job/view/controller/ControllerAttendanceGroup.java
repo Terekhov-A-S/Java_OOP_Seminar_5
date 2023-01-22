@@ -49,11 +49,12 @@ public class ControllerAttendanceGroup {
         for (String iterable : sortedStudentVisit.keySet()) {
             sortListStudent.add(iterable);
         }
-        System.out.println("_-=#=-_-=#=-_-=#=-_-=#=-_-=#=-_-=#=-_-=#=-_");
+        System.out.println("\n_-=#=-_-=#=-_-=#=-_-=#=-_-=#=-_-=#=-_-=#=-_");
         System.out.println("Список посещаемости студентов по убыванию:");
         for (int i = sortListStudent.size() - 1; i >= 0; i--) {
             System.out.println(sortListStudent.get(i));
-        }
+            }
+        System.out.println("_-=#=-_-=#=-_-=#=-_-=#=-_-=#=-_-=#=-_-=#=-_");
     }
 
     // Метод выводящий список людей из группы с посещаемостью ниже 25%
@@ -68,7 +69,7 @@ public class ControllerAttendanceGroup {
                 count++;
             }
             if ((float) count / 100 * 25 > countTrue) {
-                System.out.println(attendanceVisit.getStudent().getName() + " - процент посещения ниже 25%");
+                System.out.println("!!!ВНИМАНИЕ!!! [" + attendanceVisit.getStudent().getName() + "] - процент посещения ниже 25 %");
             }
         }
     }
@@ -78,14 +79,16 @@ public class ControllerAttendanceGroup {
         for (AttendanceVisitStudent attendanceVisit : attendanceGroup.getAttendanceView()) {
             int count = 0;
             int countTrue = 0;
+            System.out.println("--------------------------------------------------");
             for (Boolean boolean1 : attendanceVisit.getVisit().values()) {
                 if (boolean1 == true) {
                     countTrue++;
                 }
                 count++;
             }
-            System.out.println(attendanceVisit.getStudent().getName() + " - процент посещения = "
-                    + (float) countTrue * 100 / count + "\n");
+            System.out.println("[ " + attendanceVisit.getStudent().getName()  + " - процент посещения = "
+                    + (float) countTrue * 100 / count + " % ]");
+            System.out.println("--------------------------------------------------");
         }
     }
 
